@@ -19,25 +19,25 @@ const {
 
 // Admin authentication middleware
 
-router.use((req, res, next) => {
-console.log("SESSION:", req.sessionID, req.session);
+// router.use((req, res, next) => {
+// console.log("SESSION:", req.sessionID, req.session);
 
 
-  if (!req.session?.user || req.session.user.role !== "admin") {
-console.log("SESSION:", req.sessionID, req.session);
-    return res.status(401).json({
+//   if (!req.session?.user || req.session.user.role !== "admin") {
+// console.log("SESSION:", req.sessionID, req.session);
+//     return res.status(401).json({
 
-      success: false,
+//       success: false,
 
-      message: "Authentication required. Please log in as admin.",
+//       message: "Authentication required. Please log in as admin.",
 
-    });
+//     });
 
-  }
+//   }
 
-  next();
+//   next();
 
-});
+// });
 
 // Create a new report
 
